@@ -53,6 +53,30 @@
 - **WCAG 2.2 AA Compliance** - Full accessibility standards
 - **ARIA Labels & Keyboard Navigation**
 
+## Backend & Infrastructure
+
+This project includes a lightweight backend implemented using Vercel Serverless Functions.
+
+### Contact Form Backend
+- Implemented using a Vercel API route
+- Handles secure POST requests from the frontend
+- Sends transactional emails using the Resend API
+- Environment variables managed via Vercel
+- Includes:
+  - Method guarding (POST only)
+  - Input validation
+  - Error handling and logging
+  - CORS handling
+  - Production-ready HTML email templates
+
+### Deployment
+- Hosted on Vercel
+- Connected to a custom domain
+- CI/CD via GitHub integration
+- Environment-specific configuration via Vercel dashboard
+
+This architecture keeps the frontend lightweight while providing secure server-side functionality without a separate backend server.
+
 ---
 
 ## ✨ Key Features
