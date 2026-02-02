@@ -77,6 +77,70 @@ This project includes a lightweight backend implemented using Vercel Serverless 
 
 This architecture keeps the frontend lightweight while providing secure server-side functionality without a separate backend server.
 
+🤖 AI Chatbot (Backend Overview)
+
+This website includes a custom AI-powered chatbot designed to assist visitors, answer questions about the company’s services, and provide a professional first point of contact.
+
+Architecture
+
+Frontend: Custom chatbot UI integrated into the website
+
+Backend: Vercel Serverless Function (/api/chat.ts)
+
+AI Model: OpenAI gpt-4o-mini
+
+Hosting: Vercel (Serverless + Edge-ready)
+
+Environment Management: Vercel Environment Variables
+
+How It Works
+
+The user sends a message from the website chatbot UI.
+
+The frontend sends a POST request to /api/chat.
+
+The serverless function:
+
+Validates input and chat history
+
+Applies rate limiting to prevent abuse
+
+Injects a predefined system prompt to control tone and behavior
+
+Forwards the request to the OpenAI API
+
+The AI response is returned and displayed in the chat UI.
+
+Key Features
+
+Stateless design (no database required)
+
+Rate-limited to prevent spam
+
+Secure API key handling via environment variables
+
+Controlled AI behavior using a system prompt
+
+Production-ready SaaS-style chatbot backend
+
+Security & Configuration
+
+OpenAI API key is stored securely in Vercel:
+
+OPENAI_API_KEY
+
+No secrets are exposed to the frontend
+
+Backend logic is isolated in serverless functions
+
+Deployment Notes
+
+Any change to environment variables requires a redeploy on Vercel
+
+The chatbot works in both Preview and Production environments
+
+Designed to scale automatically with Vercel’s serverless infrastructure
+
 ---
 
 ## ✨ Key Features
