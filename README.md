@@ -10,11 +10,9 @@
 
 ### 📸 Screenshots
 
-<!-- Add screenshots here using the following format:
 ![Homepage](./screenshots/homepage.png)
 ![Services Section](./screenshots/services.png)
 ![Blog Section](./screenshots/contact.png)
--->
 
 ---
 
