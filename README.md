@@ -12,7 +12,7 @@
 
 ![Homepage](./screenshots/homepage.png)
 ![Services Section](./screenshots/services.png)
-![Blog Section](./screenshots/contact.png)
+![Blog Section](./screenshots/blog.png)
 
 ---
 
