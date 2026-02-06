@@ -1,4 +1,4 @@
-# Mind Your Business Agency - Commission Project 2025
+# Mind Your Business Agency - Commission Project 2026
 
 ## 🌟 Live Project
 
@@ -6,115 +6,226 @@
 
 ## 📋 Project Overview
 
-**Mind Your Business Agency** is a professional commission project developed in 2026 for a digital marketing and business consulting agency. As a freelance partner for this agency, I designed and built a modern, high-performance website that effectively communicates their services, showcases their expertise, and converts visitors into clients. This project represents my current professional capabilities in creating enterprise-level digital solutions.
+**Mind Your Business Agency** is a professional commission project developed in 2025 for a digital marketing and business consulting agency. As a freelance partner for this agency, I designed and built a modern, high-performance website that effectively communicates their services, showcases their expertise, and converts visitors into clients. This project represents my current professional capabilities in creating enterprise-level digital solutions.
+
+### 📸 Screenshots
+
+<!-- Add screenshots here using the following format:
+![Homepage](./screenshots/homepage.png)
+![Services Section](./screenshots/services.png)
+![Contact Page](./screenshots/contact.png)
+-->
 
 ---
 
 ## 🚀 Technology Stack
 
-### **Core Framework & Performance**
-- **Next.js 15** with React 19 - Latest framework features with enhanced performance
-- **TypeScript** - Full type safety for enterprise reliability
-- **App Router & Server Components** - Optimized server-side rendering strategy
-- **React Server Components (RSC)** - Reduced client-side JavaScript
+### **Core Framework & Build Tools**
+- **React 18.3** - Modern React with hooks and concurrent features
+- **TypeScript 5.8** - Full type safety and enhanced developer experience
+- **Vite 7.3** - Lightning-fast build tool with HMR and optimized production builds
+- **React Router DOM 6.30** - Client-side routing and navigation
+- **Bun** - Fast package manager and runtime
 
 ### **Styling & UI/UX**
-- **Tailwind CSS v4** - Latest version with enhanced utility classes
-- **shadcn/ui** - Accessible, customizable component library
-- **Framer Motion** - Advanced animations and micro-interactions
-- **Lucide React** - Modern icon set for professional design
+- **Tailwind CSS 3.4** - Utility-first CSS framework with custom configuration
+- **shadcn/ui** - Accessible, customizable component library built on Radix UI
+- **Radix UI** - Unstyled, accessible components (Dialog, Dropdown, Accordion, etc.)
+- **Tailwind Merge** - Intelligent Tailwind class merging utility
+- **Class Variance Authority (CVA)** - Component variant management
+- **Lucide React** - Modern, customizable icon library
+- **Next Themes** - Dark/light mode theme management
 
-### **Content & CMS**
-- **Sanity.io** - Headless CMS for full content control
-- **GROQ** - Sanity's query language for structured content
-- **Portable Text** - Rich text content with custom components
-- **Image CDN** - Optimized image delivery
+### **Animation & Interactions**
+- **GSAP 3.14** - Professional-grade animation library
+- **Lenis 1.3** - Smooth scroll library for enhanced scrolling experience
+- **Embla Carousel** - Lightweight, extensible carousel component
+- **Vaul** - Beautiful drawer component for mobile interactions
 
-### **Forms & Communication**
-- **React Hook Form** - Performant form management
-- **Zod** - Schema validation for form security
-- **Nodemailer/Resend** - Email processing and delivery
-- **Server Actions** - Secure form handling
+### **Forms & Validation**
+- **React Hook Form 7.61** - Performant forms with easy validation
+- **Zod 3.25** - TypeScript-first schema validation
+- **@hookform/resolvers** - Validation library integration for React Hook Form
 
-### **Analytics & Tracking**
-- **Vercel Analytics** - Performance and traffic insights
-- **Google Tag Manager** - Marketing and conversion tracking
-- **Hotjar/Crazy Egg** - User behavior analysis
+### **Data Management**
+- **TanStack React Query 5.83** - Powerful data synchronization and caching
+- **Supabase JS 2.89** - Backend as a Service (BaaS) client
+- **React Context API** - State management (Language, Theme)
 
-### **Performance & Optimization**
-- **Vercel Edge Functions** - Global low-latency API endpoints
-- **Next.js Image Optimization** - Automatic responsive images
-- **Font Optimization** - Variable fonts with size-adjust
-- **Code Splitting** - Dynamic imports for faster loads
+### **UI Components & Utilities**
+- **React Helmet Async** - Document head management for SEO
+- **React Day Picker** - Flexible date picker component
+- **Sonner** - Toast notifications system
+- **CMDK** - Command menu component
+- **Recharts** - Chart library for data visualization
+- **Input OTP** - One-time password input component
+- **Date-fns** - Modern date utility library
 
-### **SEO & Accessibility**
-- **Next.js Metadata API** - Dynamic SEO optimization
-- **Schema.org Structured Data** - Enhanced search visibility
-- **WCAG 2.2 AA Compliance** - Full accessibility standards
-- **ARIA Labels & Keyboard Navigation**
+### **SEO & Meta Tags**
+- **React Helmet Async** - Dynamic meta tags and SEO optimization
+- **Sitemap & Robots.txt** - Search engine optimization files
+- Custom meta tags per page for social sharing
 
-## Backend & Infrastructure
+## 🔧 Backend & Infrastructure
 
-This project includes a lightweight backend implemented using Vercel Serverless Functions.
+### **Serverless Backend**
+- **Vercel Serverless Functions** - API routes for backend logic
+- **Supabase** - Backend as a Service (BaaS) for database and authentication
+- **@vercel/node** - TypeScript support for Vercel API routes
 
-### Contact Form Backend
-- Implemented using a Vercel API route
-- Handles secure POST requests from the frontend
-- Sends transactional emails using the Resend API
-- Environment variables managed via Vercel
-- Includes:
-  - Method guarding (POST only)
-  - Input validation
-  - Error handling and logging
+### **API Routes** (`/api` directory)
+
+#### 1. **Contact Form API** (`/api/contact.ts`)
+- Handles contact form submissions
+- Features:
+  - Rate limiting (5 requests per minute per IP)
+  - Input validation and sanitization
+  - Email notification via Supabase Edge Function
   - CORS handling
-  - Production-ready HTML email templates
+  - Error logging and handling
+  - In-memory rate limit store with automatic cleanup
 
-### Deployment
-- Hosted on Vercel
-- Connected to a custom domain
-- CI/CD via GitHub integration
-- Environment-specific configuration via Vercel dashboard
+#### 2. **AI Chatbot API** (`/api/chat.ts`)
+- Powers the AI-powered chatbot
+- Features:
+  - OpenAI GPT-4o-mini integration
+  - Rate limiting (10 requests per minute per IP)
+  - Session management with conversation history
+  - Custom system prompts for brand-aligned responses
+  - Stateless architecture
+  - Secure API key handling via environment variables
+  - Error handling and graceful fallbacks
 
-This architecture keeps the frontend lightweight while providing secure server-side functionality without a separate backend server.
+### **Supabase Edge Functions**
+Located in `/supabase/functions/`:
 
-### 🤖 AI Chatbot (Backend Overview)
+1. **myb-chat** - Additional chat processing and analytics
+2. **send-lead-notification** - Email notifications for new leads
+3. **send-quote-request** - Quote request processing and notifications
 
-This website includes a custom AI-powered chatbot designed to assist visitors, answer questions about the company’s services, and provide a professional first point of contact.
+### **Deployment & Hosting**
+- **Vercel** - Primary hosting platform
+  - Automatic deployments from Git
+  - Preview deployments for branches
+  - Environment variable management
+  - Edge network for global low latency
+  - Analytics and performance monitoring
+- **Custom Domain** - Connected via Vercel
+- **SSL/TLS** - Automatic HTTPS with Vercel
 
-Architecture:
- - Frontend: Custom chatbot UI integrated into the website
- - Backend: Vercel Serverless Function (/api/chat.ts)
- - AI Model: OpenAI gpt-4o-mini
- - Hosting: Vercel (Serverless + Edge-ready)
- - Environment Management: Vercel Environment Variables
+### **Environment Variables**
+Managed via Vercel Dashboard:
+- `OPENAI_API_KEY` - OpenAI API access
+- `SUPABASE_URL` - Supabase project URL
+- `SUPABASE_ANON_KEY` - Supabase public anonymous key
+- Additional service-specific keys
 
-How It Works:
- - The user sends a message from the website chatbot UI.
- - The frontend sends a POST request to /api/chat.
- - The serverless function:
-   - Validates input and chat history
-   - Applies rate limiting to prevent abuse
-   - Injects a predefined system prompt to control tone and behavior
-   - Forwards the request to the OpenAI API
- - The AI response is returned and displayed in the chat UI.
+### **Security Features**
+- Rate limiting on all API endpoints
+- CORS configuration for API routes
+- Environment variable security (never exposed to client)
+- Input validation and sanitization
+- IP-based request tracking
+- Automatic cleanup of in-memory stores
 
-Key Features:
- - Stateless design (no database required)
- - Rate-limited to prevent spam
- - Secure API key handling via environment variables
- - Controlled AI behavior using a system prompt
- - Production-ready SaaS-style chatbot backend
+## 🏗️ Project Architecture
 
-Security & Configuration:
- - OpenAI API key is stored securely in Vercel:
-   - OPENAI_API_KEY
- - No secrets are exposed to the frontend
- - Backend logic is isolated in serverless functions
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        CLIENT SIDE                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐    │
+│  │   React 18   │  │  TypeScript  │  │   Vite 7.3   │    │
+│  │  + Router    │  │   (Type      │  │   (Build     │    │
+│  │              │  │   Safety)    │  │   Tool)      │    │
+│  └──────────────┘  └──────────────┘  └──────────────┘    │
+│                                                             │
+│  ┌────────────────────────────────────────────────────────┐   │
+│  │              UI Layer                              │   │
+│  │  - Tailwind CSS + shadcn/ui + Radix UI            │   │
+│  │  - GSAP Animations + Lenis Smooth Scroll          │   │
+│  │  - Custom Components (Header, Footer, etc.)       │   │
+│  └────────────────────────────────────────────────────────┘   │
+│                                                             │
+│  ┌────────────────────────────────────────────────────────┐   │
+│  │           State Management                         │   │
+│  │  - React Context (Language, Theme)                 │   │
+│  │  - TanStack Query (Server State)                   │   │
+│  │  - React Hook Form (Form State)                    │   │
+│  └────────────────────────────────────────────────────────┘   │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                            │ HTTPS
+                            ▼
+┌─────────────────────────────────────────────────────────────┐
+│                 VERCEL EDGE NETWORK                         │
+│              (Static Assets + Routing)                      │
+└─────────────────────────────────────────────────────────────┘
+                            │
+                ┌───────────┴───────────┐
+                │                       │
+                ▼                       ▼
+┌────────────────────────┐  ┌──────────────────────────────┐
+│  VERCEL SERVERLESS     │  │   SUPABASE BaaS              │
+│      FUNCTIONS         │  │                              │
+├────────────────────────┤  ├──────────────────────────────┤
+│                        │  │                              │
+│ /api/chat.ts          │  │  ┌────────────────────────┐     │
+│  - OpenAI GPT-4o-mini │  │  │  Edge Functions    │     │
+│  - Rate Limiting      │  │  │  ----------------   │     │
+│  - Session Mgmt       │  │  │  - myb-chat        │     │
+│                        │  │  │  - send-lead-...   │     │
+│ /api/contact.ts       │  │  │  - send-quote-...  │     │
+│  - Form Processing    │  │  └────────────────────────┘     │
+│  - Rate Limiting      │  │                              │
+│  - Email Trigger      │──┼─► Triggers Edge Functions   │
+│                        │  │                              │
+└────────────────────────┘  │  ┌────────────────────────┐     │
+                            │  │   Database         │     │
+                            │  │  (if used)         │     │
+                            │  └────────────────────────┘     │
+                            │                              │
+                            └──────────────────────────────┘
+                                        │
+                                        ▼
+                            ┌──────────────────────────┐
+                            │   External Services      │
+                            │  -------------------     │
+                            │  - OpenAI API           │
+                            │  - Email Service        │
+                            └──────────────────────────┘
+```
 
-Deployment Notes: 
- - Any change to environment variables requires a redeploy on Vercel
- - The chatbot works in both Preview and Production environments
- - Designed to scale automatically with Vercel’s serverless infrastructure
+### Architecture Highlights:
+
+**Frontend:**
+- Single Page Application (SPA) built with React 18 and TypeScript
+- Client-side routing with React Router DOM
+- Component-based architecture with reusable UI components
+- Responsive design with Tailwind CSS
+- Advanced animations with GSAP and smooth scrolling with Lenis
+
+**Backend:**
+- Serverless architecture using Vercel Functions
+- API routes handle contact forms and AI chat
+- Supabase Edge Functions for additional processing
+- Stateless design for infinite scalability
+- Rate limiting and security built-in
+
+**Data Flow:**
+1. User interacts with frontend (React components)
+2. API requests sent to Vercel Serverless Functions
+3. Functions process requests, apply rate limiting, validate input
+4. External services called (OpenAI, Supabase) as needed
+5. Response returned to frontend and displayed to user
+
+**Deployment:**
+- Continuous deployment from Git repository
+- Automatic preview deployments for pull requests
+- Production deployment on merge to main branch
+- Global CDN distribution via Vercel Edge Network
 
 ---
 
@@ -312,3 +423,5 @@ As a freelance partner for the agency, this project demonstrates:
 ---
 
 *This project showcases professional agency website development at its highest level—combining cutting-edge technology with strategic business understanding to deliver measurable results for our agency partner.*
+
+
