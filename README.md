@@ -13,7 +13,7 @@
 <!-- Add screenshots here using the following format:
 ![Homepage](./screenshots/homepage.png)
 ![Services Section](./screenshots/services.png)
-![Contact Page](./screenshots/contact.png)
+![Blog Section](./screenshots/contact.png)
 -->
 
 ---
