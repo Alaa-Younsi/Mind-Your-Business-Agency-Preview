@@ -135,25 +135,25 @@ Managed via Vercel Dashboard:
 │                        CLIENT SIDE                          │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐    │
-│  │   React 18   │  │  TypeScript  │  │   Vite 7.3   │    │
-│  │  + Router    │  │   (Type      │  │   (Build     │    │
-│  │              │  │   Safety)    │  │   Tool)      │    │
-│  └──────────────┘  └──────────────┘  └──────────────┘    │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │   React 18   │  │  TypeScript  │  │   Vite 7.3   │       │
+│  │  + Router    │  │   (Type      │  │   (Build     │       │
+│  │              │  │   Safety)    │  │   Tool)      │       │
+│  └──────────────┘  └──────────────┘  └──────────────┘       │
 │                                                             │
-│  ┌────────────────────────────────────────────────────────┐   │
-│  │              UI Layer                              │   │
-│  │  - Tailwind CSS + shadcn/ui + Radix UI            │   │
-│  │  - GSAP Animations + Lenis Smooth Scroll          │   │
-│  │  - Custom Components (Header, Footer, etc.)       │   │
-│  └────────────────────────────────────────────────────────┘   │
+│  ┌────────────────────────────────────────────────────────┐ │
+│  │              UI Layer                                  │ │
+│  │  - Tailwind CSS + shadcn/ui + Radix UI                 │ │
+│  │  - GSAP Animations + Lenis Smooth Scroll               │ │
+│  │  - Custom Components (Header, Footer, etc.)            │ │
+│  └────────────────────────────────────────────────────────┘ │
 │                                                             │
-│  ┌────────────────────────────────────────────────────────┐   │
-│  │           State Management                         │   │
-│  │  - React Context (Language, Theme)                 │   │
-│  │  - TanStack Query (Server State)                   │   │
-│  │  - React Hook Form (Form State)                    │   │
-│  └────────────────────────────────────────────────────────┘   │
+│  ┌────────────────────────────────────────────────────────┐ │
+│  │           State Management                             │ │
+│  │  - React Context (Language, Theme)                     │ │
+│  │  - TanStack Query (Server State)                       │ │
+│  │  - React Hook Form (Form State)                        │ │ 
+│  └────────────────────────────────────────────────────────┘ │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
                             │
@@ -172,20 +172,20 @@ Managed via Vercel Dashboard:
 │      FUNCTIONS         │  │                              │
 ├────────────────────────┤  ├──────────────────────────────┤
 │                        │  │                              │
-│ /api/chat.ts          │  │  ┌────────────────────────┐     │
-│  - OpenAI GPT-4o-mini │  │  │  Edge Functions    │     │
-│  - Rate Limiting      │  │  │  ----------------   │     │
-│  - Session Mgmt       │  │  │  - myb-chat        │     │
-│                        │  │  │  - send-lead-...   │     │
-│ /api/contact.ts       │  │  │  - send-quote-...  │     │
-│  - Form Processing    │  │  └────────────────────────┘     │
-│  - Rate Limiting      │  │                              │
-│  - Email Trigger      │──┼─► Triggers Edge Functions   │
+│ /api/chat.ts           │  │  ┌────────────────────────┐  │
+│  - OpenAI GPT-4o-mini  │  │  │  Edge Functions        │  │
+│  - Rate Limiting       │  │  │  ----------------      │  │
+│  - Session Mgmt        │  │  │  - myb-chat            │  │
+│                        │  │  │  - send-lead-...       │  │
+│ /api/contact.ts        │  │  │  - send-quote-...      │  │
+│  - Form Processing     │  │  └────────────────────────┘  │
+│  - Rate Limiting       │  │                              │
+│  - Email Trigger       │──┼─► Triggers Edge Functions    │
 │                        │  │                              │
-└────────────────────────┘  │  ┌────────────────────────┐     │
-                            │  │   Database         │     │
-                            │  │  (if used)         │     │
-                            │  └────────────────────────┘     │
+└────────────────────────┘  │  ┌────────────────────────┐  │
+                            │  │   Database             │  │
+                            │  │  (if used)             │  │
+                            │  └────────────────────────┘  │
                             │                              │
                             └──────────────────────────────┘
                                         │
@@ -193,8 +193,8 @@ Managed via Vercel Dashboard:
                             ┌──────────────────────────┐
                             │   External Services      │
                             │  -------------------     │
-                            │  - OpenAI API           │
-                            │  - Email Service        │
+                            │  - OpenAI API            │
+                            │  - Email Service         │
                             └──────────────────────────┘
 ```
 
