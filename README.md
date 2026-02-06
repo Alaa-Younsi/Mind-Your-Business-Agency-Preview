@@ -77,69 +77,44 @@ This project includes a lightweight backend implemented using Vercel Serverless 
 
 This architecture keeps the frontend lightweight while providing secure server-side functionality without a separate backend server.
 
-🤖 AI Chatbot (Backend Overview)
+### 🤖 AI Chatbot (Backend Overview)
 
 This website includes a custom AI-powered chatbot designed to assist visitors, answer questions about the company’s services, and provide a professional first point of contact.
 
-Architecture
+Architecture:
+ - Frontend: Custom chatbot UI integrated into the website
+ - Backend: Vercel Serverless Function (/api/chat.ts)
+ - AI Model: OpenAI gpt-4o-mini
+ - Hosting: Vercel (Serverless + Edge-ready)
+ - Environment Management: Vercel Environment Variables
 
-Frontend: Custom chatbot UI integrated into the website
+How It Works:
+ - The user sends a message from the website chatbot UI.
+ - The frontend sends a POST request to /api/chat.
+ - The serverless function:
+   - Validates input and chat history
+   - Applies rate limiting to prevent abuse
+   - Injects a predefined system prompt to control tone and behavior
+   - Forwards the request to the OpenAI API
+ - The AI response is returned and displayed in the chat UI.
 
-Backend: Vercel Serverless Function (/api/chat.ts)
+Key Features:
+ - Stateless design (no database required)
+ - Rate-limited to prevent spam
+ - Secure API key handling via environment variables
+ - Controlled AI behavior using a system prompt
+ - Production-ready SaaS-style chatbot backend
 
-AI Model: OpenAI gpt-4o-mini
+Security & Configuration:
+ - OpenAI API key is stored securely in Vercel:
+   - OPENAI_API_KEY
+ - No secrets are exposed to the frontend
+ - Backend logic is isolated in serverless functions
 
-Hosting: Vercel (Serverless + Edge-ready)
-
-Environment Management: Vercel Environment Variables
-
-How It Works
-
-The user sends a message from the website chatbot UI.
-
-The frontend sends a POST request to /api/chat.
-
-The serverless function:
-
-Validates input and chat history
-
-Applies rate limiting to prevent abuse
-
-Injects a predefined system prompt to control tone and behavior
-
-Forwards the request to the OpenAI API
-
-The AI response is returned and displayed in the chat UI.
-
-Key Features
-
-Stateless design (no database required)
-
-Rate-limited to prevent spam
-
-Secure API key handling via environment variables
-
-Controlled AI behavior using a system prompt
-
-Production-ready SaaS-style chatbot backend
-
-Security & Configuration
-
-OpenAI API key is stored securely in Vercel:
-
-OPENAI_API_KEY
-
-No secrets are exposed to the frontend
-
-Backend logic is isolated in serverless functions
-
-Deployment Notes
-
-Any change to environment variables requires a redeploy on Vercel
-
-The chatbot works in both Preview and Production environments
-
-Designed to scale automatically with Vercel’s serverless infrastructure
+Deployment Notes: 
+ - Any change to environment variables requires a redeploy on Vercel
+ - The chatbot works in both Preview and Production environments
+ - Designed to scale automatically with Vercel’s serverless infrastructure
 
 ---
 
@@ -177,40 +152,6 @@ Designed to scale automatically with Vercel’s serverless infrastructure
 - **Performance Dashboards** - Client results visualization
 - **Blog with Advanced Filtering** - Category, tag, and search
 - **Resource Library** - Downloadable templates and guides
-
----
-
-## 📁 Project Architecture
-
-```
-mind-your-business-agency/
-├── app/                          # Next.js 15 App Router
-│   ├── (marketing)/             # Public marketing pages
-│   ├── (client)/                # Client portal (protected)
-│   ├── (services)/              # Service-specific pages
-│   ├── api/                     # API routes and server actions
-│   ├── blog/                    # Blog post pages
-│   └── resources/               # Resource library
-├── components/                   # Reusable components
-│   ├── marketing/               # Marketing-specific components
-│   ├── ui/                      # shadcn/ui extended components
-│   ├── forms/                   # Form components and validation
-│   └── animations/              # Custom animations
-├── lib/                         # Utilities and configurations
-│   ├── sanity/                  # Sanity client and queries
-│   ├── utils/                   # Helper functions
-│   └── constants/               # App constants
-├── schemas/                     # Sanity schemas
-│   ├── services/                # Service content types
-│   ├── team/                    # Team member schemas
-│   ├── blog/                    # Blog post schemas
-│   └── resources/               # Resource schemas
-├── public/                      # Static assets
-│   ├── fonts/                   # Custom fonts
-│   ├── images/                  # Static images
-│   └── documents/               # Downloadable resources
-└── types/                       # TypeScript definitions
-```
 
 ---
 
@@ -365,30 +306,6 @@ As a freelance partner for the agency, this project demonstrates:
 3. **Content as Strategy** - Quality content drives SEO and trust
 4. **Data-Driven Decisions** - Analytics inform every improvement
 
----
-
-## 🔮 Future Enhancements
-
-### **Phase 2 Roadmap (Q2 2026)**
-- **AI Chat Integration** - Lead qualification and support
-- **Client Dashboard** - Project management integration
-- **Webinar Platform** - Event hosting and registration
-- **Advanced Analytics** - Predictive lead scoring
-
-### **Phase 3 Roadmap (H2 2026)**
-- **Mobile Application** - Client portal and notifications
-- **API Marketplace** - Service integrations for clients
-- **Automation Workflows** - Marketing automation triggers
-- **International Expansion** - Multi-region deployment
-
----
-
-## 📞 Project Contact & Credits
-
-**Agency Partner:** Mind Your Business Agency  
-**Development Period:** January - March 2026  
-**Project Status:** Live with ongoing optimization  
-**Developer Role:** Lead Developer & Technical Partner  
 
 *"From concept to conversion—building digital experiences that drive business growth."*
 
