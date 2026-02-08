@@ -13,6 +13,10 @@
 ![Homepage](./screenshots/homepage.png)
 ![Services Section](./screenshots/services.png)
 ![Blog Section](./screenshots/blog.png)
+![Homepage](./screenshots/phonehomepage.png)
+![Header Section](./screenshots/phoneheader.png)
+![Our Vision Section](./screenshots/visionphone.png)
+![Chat Bot Section](./screenshots/chatbotphone.png)
 
 ---
 
