@@ -409,8 +409,8 @@ As a freelance partner for the agency, this project demonstrates:
 
 ## 📄 License
 
-Copyright (c) 2026 ENK School. All rights reserved.
-This project is private and proprietary to École Nour El Karim. No part of this project may be copied, modified, or redistributed for any commercial or personal use without the express written permission of the author.
+Copyright (c) 2026 MYB Agency. All rights reserved.
+This project is private and proprietary to MYB Agency. No part of this project may be copied, modified, or redistributed for any commercial or personal use without the express written permission of the author.
 No part of this source code may be copied, modified, redistributed, republished, licensed, or sub-licensed in any form or by any means, electronic or mechanical, for any purpose, without the express written permission of MYB Agency.
 The presence of this code on a public or private hosting platform (such as GitHub) does not constitute a grant of rights to any third party. Unauthorized use of this code may result in legal action, including but not limited to DMCA takedown requests and litigation.
 
