@@ -1,4 +1,4 @@
-# Mind Your Business Agency - Commission Project 2026df
+# Mind Your Business Agency - Commission Project 2026
 
 ## 🌟 Live Project
 
